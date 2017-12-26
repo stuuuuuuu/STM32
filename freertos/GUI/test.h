@@ -19,7 +19,6 @@
 //Copyright(C) 深圳市全动电子技术有限公司 2009-2019
 //All rights reserved
 //////////////////////////////////////////////////////////////////////////////////
-void DrawTestPage(u8 *str);
 void Test_Color(void);
 void Test_FillRec(void);
 void Test_Circle(void);

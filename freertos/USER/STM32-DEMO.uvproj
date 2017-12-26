@@ -694,11 +694,6 @@
               <FileType>1</FileType>
               <FilePath>..\GUI\test.c</FilePath>
             </File>
-            <File>
-              <FileName>led.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\GUI\led.c</FilePath>
-            </File>
           </Files>
         </Group>
       </Groups>

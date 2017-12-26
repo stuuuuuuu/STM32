@@ -1,8 +1,8 @@
 ..\output\gui.o: ..\GUI\GUI.c
 ..\output\gui.o: ..\GUI\lcd.h
 ..\output\gui.o: ..\Source\include\FreeRTOS.h
-..\output\gui.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-..\output\gui.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\gui.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\output\gui.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\gui.o: ..\Source\FreeRTOSConfig.h
 ..\output\gui.o: ..\Source\include\projdefs.h
 ..\output\gui.o: ..\Source\include\portable.h
@@ -40,8 +40,8 @@
 ..\output\gui.o: ..\FWlib\inc\stm32f10x_usart.h
 ..\output\gui.o: ..\FWlib\inc\stm32f10x_wwdg.h
 ..\output\gui.o: ..\FWlib\inc\misc.h
-..\output\gui.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
-..\output\gui.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\output\gui.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\output\gui.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\output\gui.o: ..\GUI\font.h
 ..\output\gui.o: ..\GUI\gui.h
-..\output\gui.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+..\output\gui.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h

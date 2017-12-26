@@ -10,6 +10,7 @@
 #include "key.h"
 #include "stdio.h"
 #include "RTC.h"
+#include "ADC.h"
 //////////////////////////////////////////////////////////////////////////////////	 
 //本程序只供学习使用，未经作者许可，不得用于其它任何用途
 //测试硬件：单片机STM32F103RBT6,主频72M  单片机工作电压3.3V
@@ -66,6 +67,8 @@ LCD_Fill(0,20,lcddev.width,lcddev.height-20,BLACK);
 //******************************************************************
 char Disp_Hz[10]={0};
 char Disp_Duty[10]={0};
+char Disp_BPM[10]={0};
+char Disp_IBI[10]={0};
 char Time[];
 u8 t=0;
 //float aa;	
@@ -82,6 +85,10 @@ void main_test(void)
 			Gui_StrCenter(0,120,BLUE,BLUE,(u8*)Time,16,1);
 		}
 //	aa=Get_Hz();
+	sprintf(Disp_BPM,"BPM:%d ",rt_BPM());
+	Gui_StrCenter(0,60,RED,BLUE,(u8*)Disp_BPM,16,1);
+	sprintf(Disp_IBI,"IBI:%d ms",rt_IBI());
+	Gui_StrCenter(0,80,RED,BLUE,(u8*)Disp_IBI,16,1);
 	sprintf(Disp_Hz,"hz:%3.1f",Get_Hz());
 	Gui_StrCenter(0,160,RED,BLUE,(u8*)Disp_Hz,16,1);
 	sprintf(Disp_Duty,"Duty:%d%%",Get_Cuty());

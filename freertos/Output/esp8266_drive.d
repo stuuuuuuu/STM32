@@ -3,7 +3,7 @@
 ..\output\esp8266_drive.o: ..\FWlib\inc\system.h
 ..\output\esp8266_drive.o: ..\CMSIS\stm32f10x.h
 ..\output\esp8266_drive.o: ..\CMSIS\core_cm3.h
-..\output\esp8266_drive.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\esp8266_drive.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\esp8266_drive.o: ..\CMSIS\system_stm32f10x.h
 ..\output\esp8266_drive.o: ..\USER\stm32f10x_conf.h
 ..\output\esp8266_drive.o: ..\FWlib\inc\stm32f10x_adc.h
@@ -30,14 +30,14 @@
 ..\output\esp8266_drive.o: ..\FWlib\inc\stm32f10x_usart.h
 ..\output\esp8266_drive.o: ..\FWlib\inc\stm32f10x_wwdg.h
 ..\output\esp8266_drive.o: ..\FWlib\inc\misc.h
-..\output\esp8266_drive.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-..\output\esp8266_drive.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+..\output\esp8266_drive.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\output\esp8266_drive.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 ..\output\esp8266_drive.o: ..\FWlib\inc\SysTick.h
-..\output\esp8266_drive.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\output\esp8266_drive.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 ..\output\esp8266_drive.o: ..\FWlib\inc\sta_tcpclent_test.h
 ..\output\esp8266_drive.o: ..\FWlib\inc\esp8266_public.h
 ..\output\esp8266_drive.o: ..\Source\include\FreeRTOS.h
-..\output\esp8266_drive.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\output\esp8266_drive.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\output\esp8266_drive.o: ..\Source\FreeRTOSConfig.h
 ..\output\esp8266_drive.o: ..\Source\include\projdefs.h
 ..\output\esp8266_drive.o: ..\Source\include\portable.h

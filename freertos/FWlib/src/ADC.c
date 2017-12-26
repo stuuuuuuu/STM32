@@ -207,6 +207,14 @@ void sendDataToProcessing(char symbol, int dat )
     putchar(symbol);                // symbol prefix tells Processing what type of data is coming
 		printf("%d\r\n",dat);						// the data to send culminating in a carriage return
 }
+int rt_BPM()
+{
+	return BPM;
+}
+int rt_IBI()
+{
+	return IBI;
+}
 void	spend(void)
 {
 	sendDataToProcessing('S', Signal);     // send Processing the raw Pulse Sensor data

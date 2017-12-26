@@ -1,8 +1,8 @@
 ..\output\heap_4.o: ..\Source\portable\MemMang\heap_4.c
-..\output\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\output\heap_4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\output\heap_4.o: ..\Source\include\FreeRTOS.h
-..\output\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-..\output\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\heap_4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\output\heap_4.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\heap_4.o: ..\Source\FreeRTOSConfig.h
 ..\output\heap_4.o: ..\Source\include\projdefs.h
 ..\output\heap_4.o: ..\Source\include\portable.h

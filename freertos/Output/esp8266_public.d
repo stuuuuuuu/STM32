@@ -3,7 +3,7 @@
 ..\output\esp8266_public.o: ..\FWlib\inc\system.h
 ..\output\esp8266_public.o: ..\CMSIS\stm32f10x.h
 ..\output\esp8266_public.o: ..\CMSIS\core_cm3.h
-..\output\esp8266_public.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\esp8266_public.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\esp8266_public.o: ..\CMSIS\system_stm32f10x.h
 ..\output\esp8266_public.o: ..\USER\stm32f10x_conf.h
 ..\output\esp8266_public.o: ..\FWlib\inc\stm32f10x_adc.h
@@ -30,4 +30,4 @@
 ..\output\esp8266_public.o: ..\FWlib\inc\stm32f10x_usart.h
 ..\output\esp8266_public.o: ..\FWlib\inc\stm32f10x_wwdg.h
 ..\output\esp8266_public.o: ..\FWlib\inc\misc.h
-..\output\esp8266_public.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+..\output\esp8266_public.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h

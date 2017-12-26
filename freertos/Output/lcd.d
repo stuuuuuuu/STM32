@@ -1,8 +1,8 @@
 ..\output\lcd.o: ..\GUI\lcd.c
 ..\output\lcd.o: ..\GUI\lcd.h
 ..\output\lcd.o: ..\Source\include\FreeRTOS.h
-..\output\lcd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-..\output\lcd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\lcd.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\output\lcd.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\lcd.o: ..\Source\FreeRTOSConfig.h
 ..\output\lcd.o: ..\Source\include\projdefs.h
 ..\output\lcd.o: ..\Source\include\portable.h
@@ -40,6 +40,6 @@
 ..\output\lcd.o: ..\FWlib\inc\stm32f10x_usart.h
 ..\output\lcd.o: ..\FWlib\inc\stm32f10x_wwdg.h
 ..\output\lcd.o: ..\FWlib\inc\misc.h
-..\output\lcd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\output\lcd.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\output\lcd.o: ..\FWlib\inc\usart.h
-..\output\lcd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\output\lcd.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h

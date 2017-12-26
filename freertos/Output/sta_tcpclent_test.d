@@ -3,7 +3,7 @@
 ..\output\sta_tcpclent_test.o: ..\FWlib\inc\system.h
 ..\output\sta_tcpclent_test.o: ..\CMSIS\stm32f10x.h
 ..\output\sta_tcpclent_test.o: ..\CMSIS\core_cm3.h
-..\output\sta_tcpclent_test.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\sta_tcpclent_test.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\sta_tcpclent_test.o: ..\CMSIS\system_stm32f10x.h
 ..\output\sta_tcpclent_test.o: ..\USER\stm32f10x_conf.h
 ..\output\sta_tcpclent_test.o: ..\FWlib\inc\stm32f10x_adc.h
@@ -32,9 +32,9 @@
 ..\output\sta_tcpclent_test.o: ..\FWlib\inc\misc.h
 ..\output\sta_tcpclent_test.o: ..\FWlib\inc\SysTick.h
 ..\output\sta_tcpclent_test.o: ..\FWlib\inc\usart.h
-..\output\sta_tcpclent_test.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\output\sta_tcpclent_test.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\output\sta_tcpclent_test.o: ..\FWlib\inc\esp8266_drive.h
-..\output\sta_tcpclent_test.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+..\output\sta_tcpclent_test.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 ..\output\sta_tcpclent_test.o: ..\FWlib\inc\key.h
 ..\output\sta_tcpclent_test.o: ..\FWlib\inc\driver.h
 ..\output\sta_tcpclent_test.o: ..\FWlib\inc\SYN6288.h

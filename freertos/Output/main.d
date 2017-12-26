@@ -3,7 +3,7 @@
 ..\output\main.o: ..\FWlib\inc\system.h
 ..\output\main.o: ..\CMSIS\stm32f10x.h
 ..\output\main.o: ..\CMSIS\core_cm3.h
-..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\main.o: ..\CMSIS\system_stm32f10x.h
 ..\output\main.o: ..\USER\stm32f10x_conf.h
 ..\output\main.o: ..\FWlib\inc\stm32f10x_adc.h
@@ -30,8 +30,8 @@
 ..\output\main.o: ..\FWlib\inc\stm32f10x_usart.h
 ..\output\main.o: ..\FWlib\inc\stm32f10x_wwdg.h
 ..\output\main.o: ..\FWlib\inc\misc.h
-..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+..\output\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\output\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 ..\output\main.o: ..\FWlib\inc\sta_tcpclent_test.h
 ..\output\main.o: ..\FWlib\inc\esp8266_public.h
 ..\output\main.o: ..\FWlib\inc\usart.h
@@ -39,7 +39,7 @@
 ..\output\main.o: ..\FWlib\inc\key.h
 ..\output\main.o: ..\FWlib\inc\driver.h
 ..\output\main.o: ..\Source\include\FreeRTOS.h
-..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\output\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\output\main.o: ..\Source\FreeRTOSConfig.h
 ..\output\main.o: ..\Source\include\projdefs.h
 ..\output\main.o: ..\Source\include\portable.h
@@ -51,7 +51,7 @@
 ..\output\main.o: ..\FWlib\inc\ADC.h
 ..\output\main.o: ..\FWlib\inc\SYN6288.h
 ..\output\main.o: ..\GUI\lcd.h
-..\output\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\output\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\output\main.o: ..\GUI\touch.h
 ..\output\main.o: ..\GUI\gui.h
 ..\output\main.o: ..\GUI\test.h

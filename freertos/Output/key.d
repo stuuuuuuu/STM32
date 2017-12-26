@@ -1,11 +1,11 @@
 ..\output\key.o: ..\FWlib\src\key.c
 ..\output\key.o: ..\FWlib\inc\key.h
 ..\output\key.o: ..\FWlib\inc\driver.h
-..\output\key.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+..\output\key.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 ..\output\key.o: ..\FWlib\inc\stm32f10x_rcc.h
 ..\output\key.o: ..\CMSIS\stm32f10x.h
 ..\output\key.o: ..\CMSIS\core_cm3.h
-..\output\key.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+..\output\key.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\output\key.o: ..\CMSIS\system_stm32f10x.h
 ..\output\key.o: ..\USER\stm32f10x_conf.h
 ..\output\key.o: ..\FWlib\inc\stm32f10x_adc.h
@@ -35,6 +35,6 @@
 ..\output\key.o: ..\FWlib\inc\sta_tcpclent_test.h
 ..\output\key.o: ..\FWlib\inc\system.h
 ..\output\key.o: ..\FWlib\inc\usart.h
-..\output\key.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+..\output\key.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\output\key.o: ..\FWlib\inc\esp8266_drive.h
 ..\output\key.o: ..\FWlib\inc\SYN6288.h
