@@ -65,14 +65,14 @@ void BMP_Test(void * pvParameters)
 				vTaskDelay(10);
 		}
 }
-void ADC_Re(void * pvParameters)
-{
-		while(1)
-		{
-				ADC_change();
-				vTaskDelay(2);
-		}
-}
+//void ADC_Re(void * pvParameters)
+//{
+//		while(1)
+//		{
+////				ADC_change();
+//				vTaskDelay(2);
+//		}
+//}
 
 void Spend_all(void * pvParameters)
 {
@@ -95,8 +95,8 @@ int main(void)
 			Driver_MCU_Init();	
 			NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);		
 			TIM3_PWM_Init(719,4000);
-//		TIM2_NVIC_Configuration();
-//		TIM2_Configuration();	  
+			TIM2_NVIC_Configuration();
+			TIM2_Configuration();	  
 			LED_switch(&numb);	
 //  	Systick_Init(72);
 			USART1_Init(115200);
@@ -112,7 +112,6 @@ int main(void)
 			xTaskCreate(Key_Scan, 		(const char *)"Key_Scan", configMINIMAL_STACK_SIZE,NULL,tskIDLE_PRIORITY + 6,NULL);
 			xTaskCreate(ESP8266_Link, (const char *)"ESP8266_Link", configMINIMAL_STACK_SIZE,NULL,tskIDLE_PRIORITY + 10,NULL);
 			xTaskCreate(BMP_Test, 		(const char *)"BMP_Test", configMINIMAL_STACK_SIZE,NULL,tskIDLE_PRIORITY + 9,NULL);
-			xTaskCreate(ADC_Re, 			(const char *)"ADC_Re", configMINIMAL_STACK_SIZE,NULL,tskIDLE_PRIORITY + 11,NULL);
 			xTaskCreate(Spend_all, 		(const char *)"Spend_all", configMINIMAL_STACK_SIZE,NULL,tskIDLE_PRIORITY + 2,NULL);	
 			vTaskStartScheduler();
 			return 0;

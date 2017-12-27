@@ -1,6 +1,6 @@
 Dependencies for Project 'STM32-DEMO', Target 'Target 1': (DO NOT MODIFY !)
 F (..\CMSIS\startup\startup_stm32f10x_hd.s)(0x59E1DDAC)(--cpu Cortex-M3 -g --apcs=interwork --pd "__MICROLIB SETA 1"-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\ST\STM32F10x--pd "__UVISION_VERSION SETA 516"--list ..\listing\startup_stm32f10x_hd.lst --xref -o ..\output\startup_stm32f10x_hd.o --depend ..\output\startup_stm32f10x_hd.d)
-F (.\main.c)(0x5A28EC9E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\CMSIS -I..\FWlib\inc -I..\FWlib\src -I..\USER -I..\Source\include -I..\Source\portable\Keil\ARM_CM3 -I..\Source\portable\MemMang -I..\Source -I..\GUI --c99-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="516" -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
+F (.\main.c)(0x5A42447D)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\CMSIS -I..\FWlib\inc -I..\FWlib\src -I..\USER -I..\Source\include -I..\Source\portable\Keil\ARM_CM3 -I..\Source\portable\MemMang -I..\Source -I..\GUI --c99-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="516" -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\output\main.o --omf_browse ..\output\main.crf --depend ..\output\main.d)
 I (..\FWlib\inc\esp8266_drive.h)(0x59C0D84C)
 I (..\FWlib\inc\system.h)(0x58F97129)
 I (..\CMSIS\stm32f10x.h)(0x4D783CB4)
@@ -57,7 +57,7 @@ I (..\GUI\touch.h)(0x5A02F4B2)
 I (..\GUI\gui.h)(0x5A031402)
 I (..\GUI\test.h)(0x5A423BEF)
 I (..\FWlib\inc\RTC.h)(0x5A1A5C31)
-F (.\stm32f10x_it.c)(0x59E2BE64)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\CMSIS -I..\FWlib\inc -I..\FWlib\src -I..\USER -I..\Source\include -I..\Source\portable\Keil\ARM_CM3 -I..\Source\portable\MemMang -I..\Source -I..\GUI --c99-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="516" -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\output\stm32f10x_it.o --omf_browse ..\output\stm32f10x_it.crf --depend ..\output\stm32f10x_it.d)
+F (.\stm32f10x_it.c)(0x5A424195)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\CMSIS -I..\FWlib\inc -I..\FWlib\src -I..\USER -I..\Source\include -I..\Source\portable\Keil\ARM_CM3 -I..\Source\portable\MemMang -I..\Source -I..\GUI --c99-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="516" -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\output\stm32f10x_it.o --omf_browse ..\output\stm32f10x_it.crf --depend ..\output\stm32f10x_it.d)
 I (stm32f10x_it.h)(0x4D99A59E)
 I (..\CMSIS\stm32f10x.h)(0x4D783CB4)
 I (..\CMSIS\core_cm3.h)(0x4D523B58)
@@ -90,6 +90,7 @@ I (..\FWlib\inc\misc.h)(0x4D783BB4)
 I (..\FWlib\inc\key.h)(0x5A03F77C)
 I (..\FWlib\inc\driver.h)(0x59FAD798)
 I (E:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x55AEF5F2)
+I (..\FWlib\inc\ADC.h)(0x5A42375C)
 I (..\FWlib\inc\sta_tcpclent_test.h)(0x59E600C1)
 I (..\FWlib\inc\system.h)(0x58F97129)
 F (..\FWlib\src\system.c)(0x58F97129)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\CMSIS -I..\FWlib\inc -I..\FWlib\src -I..\USER -I..\Source\include -I..\Source\portable\Keil\ARM_CM3 -I..\Source\portable\MemMang -I..\Source -I..\GUI --c99-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="516" -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\output\system.o --omf_browse ..\output\system.crf --depend ..\output\system.d)
@@ -189,7 +190,7 @@ I (..\FWlib\inc\stm32f10x_tim.h)(0x4D783BB4)
 I (..\FWlib\inc\stm32f10x_usart.h)(0x59CC5BBE)
 I (..\FWlib\inc\stm32f10x_wwdg.h)(0x4D783BB4)
 I (..\FWlib\inc\misc.h)(0x4D783BB4)
-F (..\FWlib\src\tim.c)(0x59DF2B9B)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\CMSIS -I..\FWlib\inc -I..\FWlib\src -I..\USER -I..\Source\include -I..\Source\portable\Keil\ARM_CM3 -I..\Source\portable\MemMang -I..\Source -I..\GUI --c99-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="516" -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\output\tim.o --omf_browse ..\output\tim.crf --depend ..\output\tim.d)
+F (..\FWlib\src\tim.c)(0x5A424195)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\CMSIS -I..\FWlib\inc -I..\FWlib\src -I..\USER -I..\Source\include -I..\Source\portable\Keil\ARM_CM3 -I..\Source\portable\MemMang -I..\Source -I..\GUI --c99-I E:\Keil_v5\ARM\RV31\INC-I E:\Keil_v5\ARM\CMSIS\Include-I E:\Keil_v5\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="516" -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD-o ..\output\tim.o --omf_browse ..\output\tim.crf --depend ..\output\tim.d)
 I (..\FWlib\inc\tim.h)(0x59C247DE)
 I (..\CMSIS\stm32f10x.h)(0x4D783CB4)
 I (..\CMSIS\core_cm3.h)(0x4D523B58)

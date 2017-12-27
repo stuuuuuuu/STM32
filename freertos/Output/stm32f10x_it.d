@@ -32,5 +32,6 @@
 ..\output\stm32f10x_it.o: ..\FWlib\inc\key.h
 ..\output\stm32f10x_it.o: ..\FWlib\inc\driver.h
 ..\output\stm32f10x_it.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+..\output\stm32f10x_it.o: ..\FWlib\inc\ADC.h
 ..\output\stm32f10x_it.o: ..\FWlib\inc\sta_tcpclent_test.h
 ..\output\stm32f10x_it.o: ..\FWlib\inc\system.h

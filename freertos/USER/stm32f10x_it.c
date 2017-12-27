@@ -24,6 +24,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
 #include "key.h"
+#include "ADC.h"
 #include "sta_tcpclent_test.h"
 
 
@@ -148,6 +149,7 @@ void TIM2_IRQHandler(void)
        {
 
 				TIM_ClearITPendingBit(TIM2 , TIM_FLAG_Update);
+				 ADC_change();
 //			key_scan();
 //				key_service();
 					
