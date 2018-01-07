@@ -1,0 +1,10 @@
+".\out\STARTUP.obj",
+".\out\main.obj",
+".\out\led.obj",
+".\out\usart.obj",
+".\out\syn6288.obj",
+".\out\time0.obj",
+".\out\DS18B20.obj",
+".\out\HC-SR04.obj" 
+TO ".\out\Ultrasonic" 
+PRINT(".\listing\Ultrasonic.m51") RAMSIZE(256) 

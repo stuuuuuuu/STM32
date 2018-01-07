@@ -1,0 +1,97 @@
+C51 COMPILER V9.01   MAIN                                                                  12/03/2017 11:23:49 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\out\main.obj
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE main.c BROWSE INCDIR(.\inc;.\src;.\src) DEBUG OBJECTEXTEND PRINT(.\listing\
+                    -main.lst) OBJECT(.\out\main.obj)
+
+line level    source
+
+   1          #include "reg52.h"
+   2          #include "led.h"
+   3          #include "syn6288.h"
+   4          #include "usart.h"
+   5          #include "time0.h"
+   6          #include "DS18B20.h"
+   7          #include "HC-SR04.h"
+   8          #include "stdio.h"
+   9          unsigned char text[]={"当前距离"};
+  10          int distancee;
+  11          float  gSpeed;
+  12          char b,c,d,e;
+  13          
+  14          sbit P20 = P2^0;
+  15          int main()
+  16          {
+  17   1                
+  18   1                init();           //中断初始化
+  19   1                InitLcd();    //1602初始化
+  20   1                UartIni();    //串口初始化  
+  21   1                Init_MCU();
+  22   1                Init_Parameter();
+  23   1                DS18B20_init();
+  24   1                
+  25   1        while(1)
+  26   1              {
+  27   2              
+  28   2      
+  29   2              
+  30   2               if(flag_20ms == 1)
+  31   2                {
+  32   3                      DS18B20_init(); 
+  33   3                      display(Temp);                  
+  34   3                      flag_20ms = 0;
+  35   3                      if(distancee <= 500)
+  36   3                      {
+  37   4                        P20=~P20;     
+  38   4                      }
+  39   3                 }    
+  40   2                      
+  41   2                       Trig_SuperSonic();         //触发超声波发射
+  42   2                       while(INPUT == 0)          //等待回声
+  43   2               {
+  44   3                   ;
+  45   3               }
+  46   2                       distancee = Measure_Distance(); 
+  47   2                       Init_Parameter();    
+  48   2               if(flag_2s == 0)
+  49   2                {
+  50   3                if(distancee <= 1000)
+  51   3                      {
+  52   4                      sprintf(text,"小于1米");                                                //60s读取一次温度
+  53   4                      SYN_FrameInfo(0,text);
+  54   4                      }
+C51 COMPILER V9.01   MAIN                                                                  12/03/2017 11:23:49 PAGE 2   
+
+  55   3               if(distancee <= 1500 && distancee >= 500)
+  56   3                      {
+  57   4                              P20=~P20;
+  58   4                      }
+  59   3                if(distancee <= 2000 && distancee >= 1000)
+  60   3                      {
+  61   4                      sprintf(text,"小于2米");                                                //60s读取一次温度
+  62   4                      SYN_FrameInfo(0,text);
+  63   4                      }
+  64   3                if(distancee <= 3000 && distancee >= 2000)
+  65   3                      {
+  66   4                      sprintf(text,"小于3米");                                                //60s读取一次温度
+  67   4                      SYN_FrameInfo(0,text);
+  68   4                      }
+  69   3                }
+  70   2               }
+  71   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    267    ----
+   CONSTANT SIZE    =     24    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     19    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
