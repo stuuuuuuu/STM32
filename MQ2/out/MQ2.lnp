@@ -1,0 +1,8 @@
+".\out\STARTUP.obj",
+".\out\led.obj",
+".\out\main.obj",
+".\out\ds18b20.obj",
+".\out\time0.obj",
+".\out\ADC.obj" 
+TO ".\out\MQ2" 
+PRINT(".\listing\MQ2.m51") RAMSIZE(256) 

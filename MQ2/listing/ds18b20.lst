@@ -1,0 +1,137 @@
+C51 COMPILER V9.01   DS18B20                                                               01/07/2018 13:37:04 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE DS18B20
+OBJECT MODULE PLACED IN .\out\ds18b20.obj
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE src\ds18b20.c BROWSE INCDIR(.\inc;.\src) DEBUG OBJECTEXTEND PRINT(.\listing
+                    -\ds18b20.lst) OBJECT(.\out\ds18b20.obj)
+
+line level    source
+
+   1          #include "REG51.H"
+   2          #include "INTRINS.H"
+   3          #include "DS18B20.h"
+   4          #include  "led.h"
+   5          
+   6          typedef unsigned char BYTE;
+   7          
+   8          sbit DQ = P3^3;                     //DS18B20的数据口位P3.3
+   9          Temp = 0;
+  10          void DelayXus(BYTE n);
+  11          void DS18B20_Reset();
+  12          void DS18B20_WriteByte(BYTE dat);
+  13          BYTE DS18B20_ReadByte();
+  14          
+  15          int DS18B20_init()
+  16          {        
+  17   1              BYTE TPL ;
+  18   1              BYTE TPH ;
+  19   1          DS18B20_Reset();                //设备复位
+  20   1          DS18B20_WriteByte(0xCC);        //跳过ROM命令
+  21   1          DS18B20_WriteByte(0x44);        //开始转换命令
+  22   1          
+  23   1          DS18B20_Reset();                //设备复位
+  24   1          DS18B20_WriteByte(0xCC);        //跳过ROM命令
+  25   1          DS18B20_WriteByte(0xBE);        //读暂存存储器命令
+  26   1          TPL = DS18B20_ReadByte();       //读温度低字节
+  27   1          TPH = DS18B20_ReadByte();       //读温度高字节
+  28   1              Temp = TPH;
+  29   1              Temp <<= 8;
+  30   1              Temp |= TPL;
+  31   1              Temp = Temp * 0.0625 *10 + 0.5;
+  32   1              return Temp;
+  33   1      
+  34   1      
+  35   1      }
+  36          
+  37          /**************************************
+  38          延时X*10微秒(STC90C52RC@12M)
+  39          不同的工作环境,需要调整此函数
+  40          当改用1T的MCU时,请调整此延时函数
+  41          **************************************/
+  42          void DelayX0us(BYTE n)
+  43          {
+  44   1          while (n--)
+  45   1          {
+  46   2              _nop_();
+  47   2              _nop_();
+  48   2          }
+  49   1      }
+  50          
+  51          /**************************************
+  52          复位DS18B20,并检测设备是否存在
+  53          **************************************/
+  54          void DS18B20_Reset()
+C51 COMPILER V9.01   DS18B20                                                               01/07/2018 13:37:04 PAGE 2   
+
+  55          {
+  56   1          CY = 1;
+  57   1          while (CY)
+  58   1          {
+  59   2              DQ = 0;                     //送出低电平复位信号
+  60   2              DelayX0us(48);              //延时至少480us
+  61   2              DQ = 1;                     //释放数据线
+  62   2              DelayX0us(6);               //等待60us
+  63   2              CY = DQ;                    //检测存在脉冲
+  64   2              DelayX0us(42);              //等待设备释放数据线
+  65   2          }
+  66   1      }
+  67          
+  68          /**************************************
+  69          从DS18B20读1字节数据
+  70          **************************************/
+  71          BYTE DS18B20_ReadByte()
+  72          {
+  73   1          BYTE i;
+  74   1          BYTE dat = 0;
+  75   1      
+  76   1          for (i=0; i<8; i++)             //8位计数器
+  77   1          {
+  78   2              dat >>= 1;
+  79   2              DQ = 0;                     //开始时间片
+  80   2              _nop_();                    //延时等待
+  81   2              _nop_();
+  82   2              DQ = 1;                     //准备接收
+  83   2              _nop_();                    //接收延时
+  84   2              _nop_();
+  85   2              if (DQ) dat |= 0x80;        //读取数据
+  86   2              DelayX0us(6);               //等待时间片结束
+  87   2          }
+  88   1      
+  89   1          return dat;
+  90   1      }
+  91          
+  92          /**************************************
+  93          向DS18B20写1字节数据
+  94          **************************************/
+  95          void DS18B20_WriteByte(BYTE dat)
+  96          {
+  97   1          char i;
+  98   1      
+  99   1          for (i=0; i<8; i++)             //8位计数器
+ 100   1          {
+ 101   2              DQ = 0;                     //开始时间片
+ 102   2              _nop_();                    //延时等待
+ 103   2              _nop_();
+ 104   2              dat >>= 1;                  //送出数据
+ 105   2              DQ = CY;
+ 106   2              DelayX0us(6);               //等待时间片结束
+ 107   2              DQ = 1;                     //恢复数据线
+ 108   2          }
+ 109   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    184    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+C51 COMPILER V9.01   DS18B20                                                               01/07/2018 13:37:04 PAGE 3   
+
+   DATA SIZE        =      2       1
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
