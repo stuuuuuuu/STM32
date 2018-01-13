@@ -1,11 +1,11 @@
 /**
   ******************************************************************************
-  * @file    Project/STM32F10x_StdPeriph_Template/stm32f10x_it.c 
+  * @file    Project/STM32F10x_StdPeriph_Template/stm32f10x_it.c
   * @author  MCD Application Team
   * @version V3.5.0
   * @date    08-April-2011
   * @brief   Main Interrupt Service Routines.
-  *          This file provides template for all exceptions handler and 
+  *          This file provides template for all exceptions handler and
   *          peripherals interrupt service routine.
   ******************************************************************************
   * @attention
@@ -59,10 +59,10 @@ void NMI_Handler(void)
   */
 void HardFault_Handler(void)
 {
-  /* Go to infinite loop when Hard Fault exception occurs */
-  while (1)
-  {
-  }
+    /* Go to infinite loop when Hard Fault exception occurs */
+    while (1)
+    {
+    }
 }
 
 /**
@@ -72,10 +72,10 @@ void HardFault_Handler(void)
   */
 void MemManage_Handler(void)
 {
-  /* Go to infinite loop when Memory Manage exception occurs */
-  while (1)
-  {
-  }
+    /* Go to infinite loop when Memory Manage exception occurs */
+    while (1)
+    {
+    }
 }
 
 /**
@@ -85,10 +85,10 @@ void MemManage_Handler(void)
   */
 void BusFault_Handler(void)
 {
-  /* Go to infinite loop when Bus Fault exception occurs */
-  while (1)
-  {
-  }
+    /* Go to infinite loop when Bus Fault exception occurs */
+    while (1)
+    {
+    }
 }
 
 /**
@@ -98,10 +98,10 @@ void BusFault_Handler(void)
   */
 void UsageFault_Handler(void)
 {
-  /* Go to infinite loop when Usage Fault exception occurs */
-  while (1)
-  {
-  }
+    /* Go to infinite loop when Usage Fault exception occurs */
+    while (1)
+    {
+    }
 }
 
 /**
@@ -138,24 +138,24 @@ void DebugMon_Handler(void)
   */
 //void SysTick_Handler(void)
 //{
-//	 
-//	
+//
+//
 //}
 void TIM2_IRQHandler(void)
 {
-	
-	 if(TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET)
 
-       {
+    if(TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET)
 
-				TIM_ClearITPendingBit(TIM2 , TIM_FLAG_Update);
-				 ADC_change();
+    {
+
+        TIM_ClearITPendingBit(TIM2, TIM_FLAG_Update);
+        ADC_change();
 //			key_scan();
 //				key_service();
-					
-				
-					
-			 }
+
+
+
+    }
 }
 
 /******************************************************************************/
@@ -176,7 +176,7 @@ void TIM2_IRQHandler(void)
 
 /**
   * @}
-  */ 
+  */
 
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

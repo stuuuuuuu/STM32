@@ -38,6 +38,9 @@
 ..\output\main.o: ..\FWlib\inc\tim.h
 ..\output\main.o: ..\FWlib\inc\key.h
 ..\output\main.o: ..\FWlib\inc\driver.h
+..\output\main.o: ..\FWlib\inc\ADC.h
+..\output\main.o: ..\FWlib\inc\SYN6288.h
+..\output\main.o: ..\GUI\lcd.h
 ..\output\main.o: ..\Source\include\FreeRTOS.h
 ..\output\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 ..\output\main.o: ..\Source\FreeRTOSConfig.h
@@ -48,9 +51,6 @@
 ..\output\main.o: ..\Source\include\mpu_wrappers.h
 ..\output\main.o: ..\Source\include\task.h
 ..\output\main.o: ..\Source\include\list.h
-..\output\main.o: ..\FWlib\inc\ADC.h
-..\output\main.o: ..\FWlib\inc\SYN6288.h
-..\output\main.o: ..\GUI\lcd.h
 ..\output\main.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 ..\output\main.o: ..\GUI\touch.h
 ..\output\main.o: ..\GUI\gui.h

@@ -28,6 +28,7 @@ void LCD_Fill(u16 sx,u16 sy,u16 ex,u16 ey,u16 color)
 	}
 
 	LCD_SetWindows(0,0,lcddev.width-1,lcddev.height-1);//恢复窗口设置为全屏
+
 }
 
 
@@ -235,7 +236,7 @@ u32 mypow(u8 m,u8 n)
 //返回值：  无
 //修改记录：无
 //******************************************************************  			 
-void LCD_ShowNum(u16 x,u16 y,u32 num,u8 len,u8 size)
+void LCD_ShowNum(u16 x,u16 y,u16 num,u8 len,u8 size)
 {         	
 	u8 t,temp;
 	u8 enshow=0;						   

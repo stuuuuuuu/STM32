@@ -38,3 +38,14 @@
 ..\output\key.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\output\key.o: ..\FWlib\inc\esp8266_drive.h
 ..\output\key.o: ..\FWlib\inc\SYN6288.h
+..\output\key.o: ..\FWlib\inc\ADC.h
+..\output\key.o: ..\Source\include\FreeRTOS.h
+..\output\key.o: E:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+..\output\key.o: ..\Source\FreeRTOSConfig.h
+..\output\key.o: ..\Source\include\projdefs.h
+..\output\key.o: ..\Source\include\portable.h
+..\output\key.o: ..\Source\include\deprecated_definitions.h
+..\output\key.o: ..\Source\portable\Keil\ARM_CM3\portmacro.h
+..\output\key.o: ..\Source\include\mpu_wrappers.h
+..\output\key.o: ..\Source\include\task.h
+..\output\key.o: ..\Source\include\list.h

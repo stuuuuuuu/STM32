@@ -11,38 +11,9 @@
 #include "stdio.h"
 #include "RTC.h"
 #include "ADC.h"
-//////////////////////////////////////////////////////////////////////////////////	 
-//±¾³ÌĞòÖ»¹©Ñ§Ï°Ê¹ÓÃ£¬Î´¾­×÷ÕßĞí¿É£¬²»µÃÓÃÓÚÆäËüÈÎºÎÓÃÍ¾
-//²âÊÔÓ²¼ş£ºµ¥Æ¬»úSTM32F103RBT6,Ö÷Æµ72M  µ¥Æ¬»ú¹¤×÷µçÑ¹3.3V
-//QDtech-TFTÒº¾§Çı¶¯ for STM32 IOÄ£Äâ
-//xiao·ë@ShenZhen QDtech co.,LTD
-//¹«Ë¾ÍøÕ¾:www.qdtech.net
-//ÌÔ±¦ÍøÕ¾£ºhttp://qdtech.taobao.com
-//ÎÒË¾Ìá¹©¼¼ÊõÖ§³Ö£¬ÈÎºÎ¼¼ÊõÎÊÌâ»¶Ó­ËæÊ±½»Á÷Ñ§Ï°
-//¹Ì»°(´«Õæ) :+86 0755-23594567 
-//ÊÖ»ú:15989313508£¨·ë¹¤£© 
-//ÓÊÏä:QDtech2008@gmail.com 
-//Skype:QDtech2008
-//¼¼Êõ½»Á÷QQÈº:324828016
-//´´½¨ÈÕÆÚ:2013/5/13
-//°æ±¾£ºV1.1
-//°æÈ¨ËùÓĞ£¬µÁ°æ±Ø¾¿¡£
-//Copyright(C) ÉîÛÚÊĞÈ«¶¯µç×Ó¼¼ÊõÓĞÏŞ¹«Ë¾ 2009-2019
-//All rights reserved
-//////////////////////////////////////////////////////////////////////////////////
-//========================variable==========================//
-u16 ColorTab[5]={BRED,YELLOW,RED,GREEN,BLUE};//¶¨ÒåÑÕÉ«Êı×é
-//=====================end of variable======================//
 
-//******************************************************************
-//º¯ÊıÃû£º  DrawTestPage
-//×÷Õß£º    xiao·ë@È«¶¯µç×Ó
-//ÈÕÆÚ£º    2013-02-22
-//¹¦ÄÜ£º    »æÖÆ²âÊÔ½çÃæ
-//ÊäÈë²ÎÊı£ºstr :×Ö·û´®Ö¸Õë
-//·µ»ØÖµ£º  ÎŞ
-//ĞŞ¸Ä¼ÇÂ¼£º
-//******************************************************************
+u16 ColorTab[5]={BRED,YELLOW,RED,GREEN,BLUE};//¶¨ÒåÑÕÉ«Êı×é
+
 void DrawTestPage(u8 *str)
 {
 //»æÖÆ¹Ì¶¨À¸up
@@ -56,15 +27,7 @@ Gui_StrCenter(0,lcddev.height-18,WHITE,RED,(u8*)"www.w3cschool.cn",16,1);//¾ÓÖĞÏ
 LCD_Fill(0,20,lcddev.width,lcddev.height-20,BLACK);
 }
 
-//******************************************************************
-//º¯ÊıÃû£º  main_test
-//×÷Õß£º    xiao·ë@È«¶¯µç×Ó
-//ÈÕÆÚ£º    2013-02-22
-//¹¦ÄÜ£º    »æÖÆÈ«¶¯µç×Ó×ÛºÏ²âÊÔ³ÌĞòÖ÷½çÃæ
-//ÊäÈë²ÎÊı£ºÎŞ
-//·µ»ØÖµ£º  ÎŞ
-//ĞŞ¸Ä¼ÇÂ¼£º
-//******************************************************************
+
 char Disp_Hz[10]={0};
 char Disp_Duty[10]={0};
 char Disp_BPM[10]={0};
@@ -74,7 +37,7 @@ u8 t=0;
 //float aa;	
 void main_test(void)
 {
-	DrawTestPage((u8*)"²âÊÔ");
+	
 	
 	Gui_StrCenter(0,30,RED,BLUE,(u8*)"Welcome to Test",16,1);//¾ÓÖĞÏÔÊ¾
 //	Gui_StrCenter(0,120,BLUE,BLUE,"2017-11-9",16,1);//¾ÓÖĞÏÔÊ¾	
@@ -82,19 +45,19 @@ void main_test(void)
 		{
 			t=calendar.sec;
 			sprintf(Time,"%dÄê%dÔÂ%dÈÕ%dÊ±%d·Ö%dÃë",calendar.w_year,calendar.w_month,calendar.w_date,calendar.hour,calendar.min,calendar.sec);
-			Gui_StrCenter(0,120,BLUE,BLUE,(u8*)Time,16,1);
+			 Show_Str(60,120,BLUE,BLUE,(u8*)Time,16,1);
 		}
 //	aa=Get_Hz();
 	sprintf(Disp_BPM,"BPM:%d ",rt_BPM());
-	Gui_StrCenter(0,60,RED,BLUE,(u8*)Disp_BPM,16,1);
+	Show_Str(60,60,RED,BLACK,(u8*)Disp_BPM,16,1);
 	sprintf(Disp_IBI,"IBI:%d ms",rt_IBI());
-	Gui_StrCenter(0,80,RED,BLUE,(u8*)Disp_IBI,16,1);
+	Show_Str(60,80,RED,BLACK,(u8*)Disp_IBI,16,1);
 	sprintf(Disp_Hz,"hz:%3.1f",Get_Hz());
-	Gui_StrCenter(0,160,RED,BLUE,(u8*)Disp_Hz,16,1);
+	Show_Str(180,60,RED,BLACK,(u8*)Disp_Hz,16,1);
 	sprintf(Disp_Duty,"Duty:%d%%",Get_Cuty());
-	Gui_StrCenter(0,180,RED,BLUE,(u8*)Disp_Duty,16,1);
+	Show_Str(180,80,RED,BLACK,(u8*)Disp_Duty,16,1);
 	
-	vTaskDelay(800);
+	vTaskDelay(500);
 }
 
 
@@ -123,16 +86,7 @@ void Test_Color(void)
 
 }
 
-//******************************************************************
-//º¯ÊıÃû£º  Test_FillRec
-//×÷Õß£º    xiao·ë@È«¶¯µç×Ó
-//ÈÕÆÚ£º    2013-02-22
-//¹¦ÄÜ£º    ¾ØĞÎ¿òÏÔÊ¾ºÍÌî³ä²âÊÔ£¬ÒÀ´ÎÏÔÊ¾·ÛºìÉ«¡¢»ÆÉ«¡¢ºìÉ«¡¢ÂÌÉ«¡¢À¶É«¾ØĞÎ¿ò£¬
-//       	ÑÓÊ±1500ºÁÃëºó£¬ÒÀ´Î°´ÕÕ·ÛºìÉ«¡¢»ÆÉ«¡¢ºìÉ«¡¢ÂÌÉ«¡¢À¶É«Ìî³ä¾ØĞÎ¿ò 
-//ÊäÈë²ÎÊı£ºÎŞ
-//·µ»ØÖµ£º  ÎŞ
-//ĞŞ¸Ä¼ÇÂ¼£º
-//******************************************************************
+
 void Test_FillRec(void)
 {
 	u8 i=0;
