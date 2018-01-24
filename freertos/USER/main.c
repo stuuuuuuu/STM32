@@ -14,19 +14,18 @@
 #include "test.h"
 #include "RTC.h"
 volatile u32 time;
-char Open_speak[] = {"»¶Ó­²Î¼Ó²âÊÔ"};
 void GUI(void * pvParameters)
 {
 //		const portTickType xDelay = pdMS_TO_TICKS(10);
 
     LCD_Init();
-    DrawTestPage((u8*)"²âÊÔ");
+    DrawTestPage((u8*)"æ¬¢è¿Žæµ‹è¯•");
     while(1)
     {
 
         main_test();
         LCD_Fill(90,60,140,120,BLACK);
-        LCD_Fill(210,60,240,120,BLACK);
+        LCD_Fill(200,60,240,120,BLACK);
         LCD_Fill(160,120,260,140,BLACK);
 
 
@@ -45,7 +44,7 @@ void Key_Scan(void * pvParameters)
         key_scan();
         vTaskDelay(20);
         key_service();
-        vTaskDelay(20);
+       
 
     }
 
@@ -107,7 +106,7 @@ int main(void)
 
 
     xTaskCreate(GUI, 					(const char *)"GUI", configMINIMAL_STACK_SIZE,NULL,tskIDLE_PRIORITY + 3,NULL);
-    xTaskCreate(Key_Scan, 		(const char *)"Key_Scan", configMINIMAL_STACK_SIZE,NULL,tskIDLE_PRIORITY + 6,NULL);
+    xTaskCreate(Key_Scan, 		(const char *)"Key_Scan", configMINIMAL_STACK_SIZE,NULL,tskIDLE_PRIORITY + 10,NULL);
     xTaskCreate(ESP8266_Link, (const char *)"ESP8266_Link", configMINIMAL_STACK_SIZE,NULL,tskIDLE_PRIORITY + 10,NULL);
     xTaskCreate(BMP_Test, 		(const char *)"BMP_Test", configMINIMAL_STACK_SIZE,NULL,tskIDLE_PRIORITY + 9,NULL);
     xTaskCreate(Spend_all, 		(const char *)"Spend_all", configMINIMAL_STACK_SIZE,NULL,tskIDLE_PRIORITY + 2,NULL);

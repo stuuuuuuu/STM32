@@ -419,7 +419,7 @@ Section Cross References
 Removing Unused input sections from the image.
 
     Removing startup_stm32f10x_hd.o(HEAP), (512 bytes).
-    Removing main.o(.data), (25 bytes).
+    Removing main.o(.data), (12 bytes).
     Removing stm32f10x_it.o(.data), (6 bytes).
     Removing driver.o(.data), (6 bytes).
     Removing stm32f10x_can.o(.text), (2544 bytes).
@@ -438,7 +438,7 @@ Removing Unused input sections from the image.
     Removing esp8266_drive.o(.data), (6 bytes).
     Removing test.o(.constdata), (3200 bytes).
 
-19 unused section(s) (total 11363 bytes) removed from the image.
+19 unused section(s) (total 11350 bytes) removed from the image.
 
 ==============================================================================
 
@@ -850,11 +850,11 @@ Image Symbol Table
     USB_LP_CAN1_RX0_IRQHandler               0x080001f7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
     WWDG_IRQHandler                          0x080001f7   Thumb Code     0  startup_stm32f10x_hd.o(.text)
     GUI                                      0x08000201   Thumb Code    70  main.o(.text)
-    Key_Scan                                 0x08000247   Thumb Code    24  main.o(.text)
-    ESP8266_Link                             0x0800025f   Thumb Code    14  main.o(.text)
-    BMP_Test                                 0x0800026d   Thumb Code    14  main.o(.text)
-    Spend_all                                0x0800027b   Thumb Code    34  main.o(.text)
-    main                                     0x0800029d   Thumb Code   190  main.o(.text)
+    Key_Scan                                 0x08000247   Thumb Code    18  main.o(.text)
+    ESP8266_Link                             0x08000259   Thumb Code    14  main.o(.text)
+    BMP_Test                                 0x08000267   Thumb Code    14  main.o(.text)
+    Spend_all                                0x08000275   Thumb Code    34  main.o(.text)
+    main                                     0x08000297   Thumb Code   190  main.o(.text)
     NMI_Handler                              0x080003a5   Thumb Code     2  stm32f10x_it.o(.text)
     HardFault_Handler                        0x080003a7   Thumb Code     4  stm32f10x_it.o(.text)
     MemManage_Handler                        0x080003ab   Thumb Code     4  stm32f10x_it.o(.text)
@@ -1537,9 +1537,9 @@ Image component sizes
       2496         56       5262          0          0       9626   gui.o
        484         24          0         24      17408       3216   heap_4.o
       1364        174        240         30         10       4709   key.o
-      1212         40          0          6         14       6220   lcd.o
+      1212         40          0          6         14       6216   lcd.o
        148          0          0          0          0       1790   list.o
-       420         74          0          0          0     287724   main.o
+       420         80          0          0          0     287720   main.o
        220         22          0          0          0       1713   misc.o
        382         28          0          4          0       6964   port.o
        752         34         12          2         10       3137   rtc.o
@@ -1564,7 +1564,7 @@ Image component sizes
        272         18          0          6        200       3040   usart.o
 
     ----------------------------------------------------------------------
-     28876       2216       5852        248      19976     659131   Object Totals
+     28876       2222       5852        248      19976     659123   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         10          0          2          3          4          0   (incl. Padding)
 
@@ -1624,9 +1624,9 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     32876       2334       5852        248      19976     656819   Grand Totals
-     32876       2334       5852        248      19976     656819   ELF Image Totals
-     32876       2334       5852        248          0          0   ROM Totals
+     32876       2340       5852        248      19976     656811   Grand Totals
+     32876       2340       5852        248      19976     656811   ELF Image Totals
+     32876       2340       5852        248          0          0   ROM Totals
 
 ==============================================================================
 
